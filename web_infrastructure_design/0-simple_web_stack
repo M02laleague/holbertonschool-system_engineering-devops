@@ -1,0 +1,42 @@
+# Simple Web Stack Design
+
+## Description
+This is a simple web stack designed to host a website accessible via `www.foobar.com`. It uses a single server with the following components:
+
+- **1 Server**:
+  - Web server: Nginx
+  - Application server
+  - Database: MySQL
+  - Application files: The codebase of the website.
+
+## Components
+### 1. Server
+A single server hosts all the components required for the website.
+
+### 2. Domain Name
+- **www.foobar.com** is the domain name configured to point to the server IP (`8.8.8.8`).
+- Uses an **A Record** DNS entry to associate the domain with the IPv4 address.
+
+### 3. Web Server
+- **Nginx** handles incoming HTTP requests and serves static files (HTML, CSS, JS).
+
+### 4. Application Server
+- Processes the application logic (e.g., PHP or Python scripts).
+
+### 5. Database
+- **MySQL** stores the application’s data (e.g., user accounts, posts).
+
+## Communication
+- The user sends a request through a browser.
+- The DNS translates `www.foobar.com` to the server's IP (`8.8.8.8`).
+- The server communicates back using HTTP/HTTPS.
+
+## Issues with this Design
+1. **Single Point of Failure (SPOF)**:
+   - If the server goes down, the entire website becomes inaccessible.
+2. **Downtime during maintenance**:
+   - Server must be restarted for updates, causing temporary unavailability.
+3. **Scaling issues**:
+   - Unable to handle high traffic because only one server processes all requests.
+
+![alt text](<Task 0 web design.png>)
