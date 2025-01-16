@@ -1,0 +1,32 @@
+# Secured and Monitored Web Infrastructure
+
+## Diagram
+
+
+## Components
+### Security
+- **Firewalls**:
+  - Protect the network, application, and database layers.
+- **SSL/TLS Certificate**:
+  - Secures communications via HTTPS.
+
+### Monitoring
+- **Monitoring Clients**:
+  - Collect data like CPU, memory usage, and queries per second.
+
+### Base Structure
+- **Load Balancer**: Distributes traffic using round-robin algorithm.
+- **Web Servers**: Serve static files.
+- **Application Servers**: Handle business logic.
+- **Primary-Replica Database**: Improves read performance and redundancy.
+
+## Issues
+1. SSL termination at the Load Balancer can be a vulnerability.
+2. Single primary database is a SPOF for write operations.
+3. Servers with identical components may reduce efficiency.
+
+## Improvements
+- Add redundancy to the primary database.
+- Use end-to-end SSL encryption.
+- Implement more advanced monitoring tools.
+

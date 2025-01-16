@@ -1,0 +1,27 @@
+# Scale Up Infrastructure
+
+## Diagram
+![Scale Up Infrastructure](https://imgur.com/example-link)
+
+## Components
+### Load Balancers (HAProxy)
+- **Role**: Distributes traffic between web servers.
+- **Cluster**: Active-Active setup to share the load.
+
+### Web Servers (Nginx)
+- Serve static content and forward requests to application servers.
+
+### Application Servers
+- Handle application logic independently.
+
+### Database Cluster
+- **Primary Database**: Handles writes and synchronizes with replicas.
+- **Replica Database**: Handles reads to reduce the load on the primary.
+
+## Issues
+1. Increased complexity due to additional components.
+2. Single Points of Failure (SPOF) still exist in some layers.
+
+## Improvements
+1. Add redundancy for web and application servers.
+2. Use advanced monitoring tools for real-time performance tracking.

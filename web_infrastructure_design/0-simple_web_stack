@@ -39,4 +39,3 @@ A single server hosts all the components required for the website.
 3. **Scaling issues**:
    - Unable to handle high traffic because only one server processes all requests.
 
-![alt text](<Task 0 web design.png>)

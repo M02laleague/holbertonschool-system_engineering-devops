@@ -1,0 +1,20 @@
+# Distributed Web Infrastructure
+
+## Diagram
+
+
+## Components
+- **Load Balancer**: Distributes traffic using round-robin algorithm.
+- **Web Servers**: Serve static files and forward requests to the application servers.
+- **Application Servers**: Process application logic.
+- **Primary-Replica Database**: Improves read performance and redundancy.
+
+## Issues
+- SPOF: Load balancer and primary database.
+- Security: No HTTPS or firewalls.
+- No monitoring implemented.
+
+## Improvements
+- Add redundancy to the load balancer (cluster).
+- Implement HTTPS and firewalls.
+- Use monitoring tools for performance metrics.
