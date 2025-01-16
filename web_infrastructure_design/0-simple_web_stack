@@ -38,4 +38,3 @@ A single server hosts all the components required for the website.
    - Server must be restarted for updates, causing temporary unavailability.
 3. **Scaling issues**:
    - Unable to handle high traffic because only one server processes all requests.
-
